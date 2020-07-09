@@ -12,8 +12,8 @@ export class AppComponent {
   squareHeight = 100;
   squareWidth = 250;
   appCouter = 20;
-
   activate: boolean = false;
+  customerList: string[] = ['customer1', 'customer2', 'customer3', 'customerสี่']
 
   mek = 'Pongsathon';
   disName() {
@@ -36,6 +36,18 @@ export class AppComponent {
   }
   doAppMaxChange(value: number) {
     console.log('test maxChange event: ', value);
+  }
+
+  pushCustomer() {
+    this.customerList.push('customer' + (this.customerList.length + 1));
+  }
+
+  unshiftCustomer() {
+    this.customerList.unshift('customer' + (this.customerList.length + 1));
+  }
+
+  removeCustomer(index: number) {
+    this.customerList.splice(index, 1);
   }
 
 }

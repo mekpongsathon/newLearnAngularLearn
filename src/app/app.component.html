@@ -52,3 +52,13 @@ bbbb{{mek}}
 
 <!-- <app-action-bar [inputDisplay]="false"></app-action-bar>
 <app-action-bar [inputDisplay]="true"></app-action-bar> -->
+{{customerList[0]}}
+
+<ul>
+  <li *ngFor="let customer of customerList; let i = index ">
+    {{customer}}
+    <button (click)="removeCustomer(i)">remove</button>
+  </li>
+</ul>
+<button (click)="pushCustomer()">push</button>
+<button (click)="unshiftCustomer()">unshift</button>
