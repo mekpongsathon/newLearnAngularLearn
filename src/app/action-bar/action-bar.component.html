@@ -1,0 +1,14 @@
+<div>
+    <button type="button" (click)="decreas()">-</button>
+    <input type="text" [value]="couter" *ngIf="inputDisplay else elseTemplate">
+    <ng-template #elseTemplate>
+        <span style="font-size: 20px;
+                            font-weight: bold;
+                            margin-left: 5px;
+                            margin-right: 5px;">
+            {{couter}}
+        </span>
+    </ng-template>
+
+    <button type="button" (click)="increas()">+</button>
+</div>
